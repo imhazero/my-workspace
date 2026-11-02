@@ -63,13 +63,17 @@
 - [x] 5. 브라우저로 열어 PC·모바일 크기 확인 (스크린샷)
 - [x] 6. progress.md 기록
 
-## 동오식품 마이크로사이트 — 버셀 배포 준비 (계획, 승인 대기)
+## 동오식품 마이크로사이트 — 버셀 배포 준비 (완료)
 - 배포는 사용자가 직접 (GitHub 저장소 `imhazero/my-workspace` 가져오기 → Root Directory = `dongoh-microsite`)
 - 점검 결과: 순수 HTML/CSS/JS (빌드 불필요), 파일 경로 모두 소문자·상대경로 ✅, 용량 3.8MB, GitHub에 이미 올라가 있음
-- [ ] 1. `dongoh-microsite/vercel.json` 새로 만들기 — 이미지·CSS 캐시 설정, 기본 보안 헤더
-- [ ] 2. `dongoh-microsite/.vercelignore` — `.bak` 파일 등 배포 제외 (CLI로 올릴 때 대비)
-- [ ] 3. `dongoh-microsite/404.html` — 없는 주소로 들어왔을 때 보여줄 안내 페이지
-- [ ] 4. `index.html`에 파비콘 + 카톡/SNS 공유 미리보기(OG) 태그 추가 (백업: `index.html.bak`)
-- [ ] 5. 로컬 서버로 실제 배포 환경처럼 띄워 확인 (깨진 링크·이미지, 404 페이지, 헤더)
-- [ ] 6. `dongoh-microsite/DEPLOY.md` — 버셀 화면에서 클릭할 순서 안내서
-- [ ] 7. progress.md 기록 (GitHub 업로드는 자동 훅이 처리)
+- [x] 1. `dongoh-microsite/vercel.json` 새로 만들기 — 이미지·CSS 캐시 설정, 기본 보안 헤더
+- [x] 2. `dongoh-microsite/.vercelignore` — `.bak` 파일 등 배포 제외 (CLI로 올릴 때 대비)
+- [x] 3. `dongoh-microsite/404.html` — 없는 주소로 들어왔을 때 보여줄 안내 페이지
+- [x] 4. `index.html`에 파비콘 + 카톡/SNS 공유 미리보기(OG) 태그 추가 (백업: `index.html.bak`)
+- [x] 5. 로컬 서버로 실제 배포 환경처럼 띄워 확인 (깨진 링크·이미지, 404 페이지, 헤더)
+- [x] 6. `dongoh-microsite/DEPLOY.md` — 버셀 화면에서 클릭할 순서 안내서
+- [x] 7. progress.md 기록 (GitHub 업로드는 자동 훅이 처리)
+
+## 다음에 할 것 (사용자)
+- [ ] 버셀에서 직접 배포 — 순서: `dongoh-microsite/DEPLOY.md` (Root Directory = `dongoh-microsite` 꼭!)
+- [ ] 배포 주소 알려주기 → og:url, og:image를 전체 주소로 교체

@@ -1,0 +1,10 @@
+# 버셀 배포에서 제외할 파일 (CLI로 직접 올릴 때 적용)
+*.bak
+*.md
+.env
+.env.*
+*.key
+*.pem
+.DS_Store
+Thumbs.db
+desktop.ini

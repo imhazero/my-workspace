@@ -52,3 +52,10 @@
   - Unsplash 무료 라이선스 사진 2장: PC용 Erick Morales Oyola(vHDLjO-iW8k), 휴대폰용 Lennart Rudolph(FhJv7md0NNw) — 상업 이용 가능, 푸터에 출처 표기
   - 그림(SVG) 해조류·빛줄기 제거 → 사진 배경 + 천천히 확대 효과 + 어두운 바다색 막, 기포는 유지 (원본 백업: `script.js.bak`)
   - 검증: PC·휴대폰 대문 스크린샷 확인, JS 오류 0 / 깨진 이미지 0
+- 동오식품 마이크로사이트 버셀 배포 준비 (배포는 사용자가 직접)
+  - 새 파일: `vercel.json`(보안 헤더 4종, 이미지 7일·CSS/JS 1시간 캐시, cleanUrls), `.vercelignore`(.bak/.md/키 파일 제외), `404.html`, `DEPLOY.md`(버셀 클릭 순서 안내)
+  - 이미지 3개 생성: favicon.png(64), apple-touch-icon.png(180) — 로고 꽃잎 심볼만 추출 / og-image.jpg(1200×630) — 대문 사진에서 잘라냄
+  - `index.html` head에 파비콘·theme-color·공유 미리보기(OG) 태그 추가 (원본 백업: `index.html.bak`)
+    - og:url·og:image는 임시로 상대경로 → 배포 주소 확정 후 전체 주소로 교체 필요
+  - 검증: 버셀 흉내 로컬 서버(임시 폴더)로 참조 파일 64개 모두 200, 헤더·캐시 적용, 없는 주소 → 404 페이지, .bak 차단 / Chrome으로 PC(1440)·휴대폰(390) 홈·404 화면 확인
+  - 문제 3건: ① 시험 서버가 경로 표기(/ vs \) 비교 오류로 전부 404 → 서버 수정(사이트 문제 아님) ② 휴대폰 스크린샷 글자 잘림 → 원인은 윈도우 헤드리스 크롬의 최소 창 폭, 390px iframe으로 재촬영해 정상 확인 (404.html 폭 맞춤은 예방 차원으로 유지) ③ iframe이 빈 화면 → X-Frame-Options 보안 헤더가 정상 작동한 것, 같은 주소에서 띄워 해결
