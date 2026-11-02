@@ -38,8 +38,11 @@
   <!-- ============ HERO ============ -->
   <section class="hero" aria-label="Introduction">
     <div class="hero__sea" aria-hidden="true">
-      <div class="hero__rays"></div>
-      <svg class="hero__kelp" id="heroKelp" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice"></svg>
+      <picture class="hero__photo">
+        <source media="(max-aspect-ratio: 4/5)" srcset="images/hero-kelp-mobile.jpg">
+        <img src="images/hero-kelp.jpg" alt="" fetchpriority="high">
+      </picture>
+      <div class="hero__shade"></div>
       <div class="hero__particles" id="heroParticles"></div>
     </div>
 
@@ -304,7 +307,8 @@
 <footer class="footer">
   <div class="container footer__inner">
     <img src="images/logo-dfc.png" alt="DFC Dongoh Food Co., Ltd." class="footer__logo">
-    <p>© Dongoh Food Co., Ltd. All rights reserved.</p>
+    <p>© Dongoh Food Co., Ltd. All rights reserved.
+      <span class="footer__credit">Hero photos: Erick Morales Oyola &amp; Lennart Rudolph / <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span></p>
     <a href="#top" class="footer__top">Back to top ↑</a>
   </div>
 </footer>

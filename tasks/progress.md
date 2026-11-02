@@ -48,3 +48,7 @@
   - 검증: Chrome으로 PC(1440px)·휴대폰(390px) 전체 화면 촬영, JS 오류 0 / 깨진 이미지 0 / 가로 넘침 없음, 제품 탭 6개 개수 일치(8·8·6·4·9·8), 휴대폰 메뉴 열림 확인
   - 브로슈어 오탈자 정리: "Wellcome"→"Welcome", "Dongo"→"Dongoh"
   - `.gitignore`에 `TEST/` 추가 (원본 87MB PDF는 GitHub 제외, 백업: `.gitignore.bak`) — 사이트만 업로드 (사용자 선택)
+- 동오식품 마이크로사이트 대문을 실사로 교체 (사용자 요청: 브로슈어 외 사진, 인터넷에서 임의 선정)
+  - Unsplash 무료 라이선스 사진 2장: PC용 Erick Morales Oyola(vHDLjO-iW8k), 휴대폰용 Lennart Rudolph(FhJv7md0NNw) — 상업 이용 가능, 푸터에 출처 표기
+  - 그림(SVG) 해조류·빛줄기 제거 → 사진 배경 + 천천히 확대 효과 + 어두운 바다색 막, 기포는 유지 (원본 백업: `script.js.bak`)
+  - 검증: PC·휴대폰 대문 스크린샷 확인, JS 오류 0 / 깨진 이미지 0

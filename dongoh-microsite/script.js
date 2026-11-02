@@ -61,76 +61,8 @@
   }, { threshold: 0.6 });
   document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
 
-  /* ---------- 3) Hero sea scene: swaying seaweed + rising bubbles ---------- */
-  const svg = document.getElementById('heroKelp');
-  const NS = 'http://www.w3.org/2000/svg';
-  const W = 1440, H = 800;
+  /* ---------- 3) Hero: rising bubbles over the photo ---------- */
   const rand = (a, b) => a + Math.random() * (b - a);
-
-  const defs = document.createElementNS(NS, 'defs');
-  defs.innerHTML = `
-    <linearGradient id="kFront" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0" stop-color="#0b2618"/><stop offset=".55" stop-color="#1f5a37"/><stop offset="1" stop-color="#3f8a5c"/>
-    </linearGradient>
-    <linearGradient id="kMid" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0" stop-color="#0c3326"/><stop offset="1" stop-color="#2c7058"/>
-    </linearGradient>
-    <linearGradient id="kBack" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0" stop-color="#0d3d40"/><stop offset="1" stop-color="#2f7e80"/>
-    </linearGradient>
-    <linearGradient id="seabed" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0c2a1f"/><stop offset="1" stop-color="#081c14"/>
-    </linearGradient>`;
-  svg.appendChild(defs);
-
-  // a single seaweed blade: wavy centre line with a tapered, rippled width
-  function bladePath(x0, h, maxW, waves, phase, lean) {
-    const n = 34, L = [], R = [];
-    for (let i = 0; i <= n; i++) {
-      const t = i / n;
-      const cx = x0 + Math.sin(t * Math.PI * waves + phase) * 22 * t + lean * t * t;
-      const y = H - t * h;
-      const w = maxW * (0.35 + Math.sin(Math.PI * Math.min(1, t * 1.1)) * 0.9) * (1 - t * 0.55) * (1 + Math.sin(t * 38 + phase) * 0.08);
-      L.push([cx - w / 2, y]); R.push([cx + w / 2, y]);
-    }
-    R.reverse();
-    const pts = L.concat(R);
-    let d = `M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
-    for (let i = 1; i < pts.length - 1; i++) {
-      const mx = (pts[i][0] + pts[i + 1][0]) / 2, my = (pts[i][1] + pts[i + 1][1]) / 2;
-      d += ` Q${pts[i][0].toFixed(1)},${pts[i][1].toFixed(1)} ${mx.toFixed(1)},${my.toFixed(1)}`;
-    }
-    return d + ' Z';
-  }
-
-  function addLayer(count, opts) {
-    const g = document.createElementNS(NS, 'g');
-    g.setAttribute('opacity', opts.opacity);
-    for (let i = 0; i < count; i++) {
-      const x = (i + rand(0.1, 0.9)) * (W / count);
-      // skip the area behind the headline on wide screens so text stays readable
-      if (opts.avoidText && x > 120 && x < 760 && Math.random() < 0.7) continue;
-      const blade = document.createElementNS(NS, 'path');
-      blade.setAttribute('d', bladePath(x, rand(opts.hMin, opts.hMax), rand(opts.wMin, opts.wMax), rand(1.2, 2.6), rand(0, Math.PI * 2), rand(-60, 60)));
-      blade.setAttribute('fill', `url(#${opts.fill})`);
-      blade.setAttribute('class', 'kelp');
-      blade.style.setProperty('--dur', rand(5, 9).toFixed(2) + 's');
-      blade.style.setProperty('--delay', (-rand(0, 8)).toFixed(2) + 's');
-      blade.style.setProperty('--amp', rand(1.5, opts.amp).toFixed(2) + 'deg');
-      g.appendChild(blade);
-    }
-    svg.appendChild(g);
-  }
-
-  addLayer(18, { fill: 'kBack', opacity: 0.45, hMin: 260, hMax: 560, wMin: 18, wMax: 38, amp: 2.5 });
-  addLayer(14, { fill: 'kMid', opacity: 0.75, hMin: 200, hMax: 430, wMin: 24, wMax: 48, amp: 3.2, avoidText: true });
-  addLayer(10, { fill: 'kFront', opacity: 0.95, hMin: 140, hMax: 330, wMin: 30, wMax: 62, amp: 4, avoidText: true });
-
-  // seabed rocks
-  const bed = document.createElementNS(NS, 'path');
-  bed.setAttribute('d', 'M0,760 C120,730 210,752 320,738 C430,724 520,760 640,748 C780,734 860,708 990,730 C1110,750 1220,722 1330,736 C1390,744 1420,738 1440,734 L1440,800 L0,800 Z');
-  bed.setAttribute('fill', 'url(#seabed)');
-  svg.appendChild(bed);
 
   // rising bubbles / plankton light
   const particles = document.getElementById('heroParticles');
