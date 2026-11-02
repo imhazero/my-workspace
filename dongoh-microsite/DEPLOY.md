@@ -71,7 +71,7 @@ vercel --prod                       # 실제(정식) 주소로 배포
 
 1. **주소 확인** — 버셀이 준 주소(예: `https://dongoh-food.vercel.app`)를 PC·휴대폰에서 열어보기
 2. **404 확인** — 주소 뒤에 `/abc` 붙여서 안내 페이지 뜨는지
-3. **카톡 미리보기 주소 교체** — `index.html` 위쪽 두 줄을 전체 주소로 바꾸기
+3. ~~카톡 미리보기 주소 교체~~ ✅ 완료 (https://dongoh-food.vercel.app, 2026-11-03) — `index.html` 위쪽 두 줄을 전체 주소로 바꾸기
    ```html
    <meta property="og:url" content="https://실제주소/">
    <meta property="og:image" content="https://실제주소/images/og-image.jpg">

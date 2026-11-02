@@ -71,3 +71,8 @@
   - 수정: ① `index.html`의 `style.css`, `script.js` 주소에 `?v=20261103` 버전 표시 → 기존 방문자도 즉시 새 파일 받음 ② `vercel.json` CSS/JS 캐시 `max-age=0, must-revalidate`, 이미지 7일 → 1일 ③ `DEPLOY.md`에 "CSS/JS 수정 시 버전 번호 올리기" 안내 추가
   - 백업: `index.html.before-cache.bak`, `vercel.json.before-cache.bak`
   - 검증: 로컬 서버 헤더 확인, JS 오류 0 / 깨진 이미지 0
+
+## 2026-11-03
+- 동오식품 사이트 배포 주소 확정: https://dongoh-food.vercel.app (사용자가 버셀 Domains에서 직접 등록)
+  - 확인: 메인·CSS·로고·og 이미지 200, 없는 주소·CLAUDE.md 404, 보안 헤더 적용
+  - `index.html` og:url·og:image를 전체 주소로 교체 (백업: `index.html.before-og.bak`), DEPLOY.md 해당 항목 완료 표시

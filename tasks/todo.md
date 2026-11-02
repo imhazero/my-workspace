@@ -75,8 +75,8 @@
 - [x] 7. progress.md 기록 (GitHub 업로드는 자동 훅이 처리)
 
 ## 다음에 할 것 (사용자)
-- [ ] 버셀에서 직접 배포 — 순서: `dongoh-microsite/DEPLOY.md` (Root Directory = `dongoh-microsite` 꼭!)
-- [ ] 배포 주소 알려주기 → og:url, og:image를 전체 주소로 교체
+- [x] 버셀에서 직접 배포 → https://dongoh-food.vercel.app
+- [x] og:url, og:image를 전체 주소로 교체
 
 ## 동오식품 마이크로사이트 — 로고 교체 (완료)
 - [x] 1. 원본 로고(영문 가로형 기본/W) 여백 잘라 웹용 생성: `logo-dongoh-color.png`, `logo-dongoh-white.png` (760×160)
