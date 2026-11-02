@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dongoh Food Co., Ltd. — Bringing the Sea to Customers</title>
+  <meta name="description" content="Dongoh Food — a seaweed-specialized company from the clean waters of Namdo, Korea, since 1973.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a href="#top" class="nav__brand" aria-label="Dongoh Food home">
+      <span class="nav__mark">DFC</span>
+      <span class="nav__name">Dongoh Food</span>
+    </a>
+    <nav class="nav__menu" id="navMenu" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#values">Values</a>
+      <a href="#history">History</a>
+      <a href="#quality">Quality</a>
+      <a href="#products">Products</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero__sea" aria-hidden="true">
+      <div class="hero__rays"></div>
+      <svg class="hero__kelp" id="heroKelp" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice"></svg>
+      <div class="hero__particles" id="heroParticles"></div>
+    </div>
+
+    <div class="hero__content container">
+      <p class="eyebrow eyebrow--light reveal">Since 1973 &nbsp;·&nbsp; Namdo, Korea</p>
+      <h1 class="hero__title reveal" style="--d:.1s">Bringing the Sea<br><em>to Customers</em></h1>
+      <p class="hero__lead reveal" style="--d:.2s">
+        For two generations, Dongoh Food has turned the clean, unpolluted waters of Korea’s southern sea
+        into honest seaweed products — trusted at tables across Japan, the Americas and Southeast Asia.
+      </p>
+      <div class="hero__actions reveal" style="--d:.3s">
+        <a href="#products" class="btn btn--light">Explore Products</a>
+        <a href="#about" class="btn btn--ghost">Our Story</a>
+      </div>
+      <p class="hero__ko reveal" style="--d:.4s" lang="ko">바다를 담아내는 기업, 동오식품</p>
+    </div>
+
+    <a href="#about" class="hero__scroll" aria-label="Scroll to content"><span></span></a>
+
+    <svg class="hero__wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path class="w1" d="M-120,64 C200,112 470,16 720,48 C970,80 1230,120 1560,72 L1560,130 L-120,130 Z"/>
+      <path class="w2" d="M-120,90 C260,40 540,120 820,84 C1090,52 1300,100 1560,80 L1560,130 L-120,130 Z"/>
+    </svg>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="stats" aria-label="Key facts">
+    <div class="container stats__grid">
+      <div class="stat reveal"><span class="stat__num" data-count="1973">1973</span><span class="stat__label">Founded in Korea</span></div>
+      <div class="stat reveal" style="--d:.1s"><span class="stat__num" data-count="50" data-suffix="+">50+</span><span class="stat__label">Years of seaweed expertise</span></div>
+      <div class="stat reveal" style="--d:.2s"><span class="stat__num" data-count="40" data-suffix="+">40+</span><span class="stat__label">Seaweed products</span></div>
+      <div class="stat reveal" style="--d:.3s"><span class="stat__num">$7M</span><span class="stat__label">Export Tower Award</span></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="container about__grid">
+      <div class="about__text">
+        <p class="eyebrow reveal">Company Introduction</p>
+        <h2 class="section__title reveal">A seaweed-specialized company devoted to seaweed for two generations.</h2>
+        <p class="reveal">Since its foundation in 1973, Dongoh Food has been focusing on processing and exporting fisheries.
+          We mainly focus on seaweed processing and exports to Japan, the Americas, and Southeast Asia.</p>
+        <p class="reveal">Building on secondary seasoning and processing, we continue to increase our added value — and
+          promise to produce reliable, healthy food based on accumulated experience and deep knowledge, to become a
+          global company offering higher-quality seaweed at better value.</p>
+      </div>
+      <div class="about__visual reveal">
+        <img src="images/photo-kelp-slate.jpg" alt="Fresh sea mustard and kelp on slate" loading="lazy">
+        <div class="about__badge"><span>Since</span><strong>1973</strong></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h3 class="about__sub reveal">We use seaweed collected from the clean, unpolluted waters of Namdo.</h3>
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <div class="feature__img"><img src="images/photo-boat.jpg" alt="Harvesting seaweed at sea" loading="lazy"></div>
+          <div class="feature__body">
+            <span class="feature__no">01</span>
+            <h4>Collecting High-Quality Ingredients</h4>
+            <p>We thoroughly select the best ingredients — seaweed that has endured the rough waters of the southern sea.</p>
+          </div>
+        </article>
+        <article class="feature reveal" style="--d:.1s">
+          <div class="feature__img"><img src="images/photo-drying.jpg" alt="Drying seaweed with natural cold air" loading="lazy"></div>
+          <div class="feature__body">
+            <span class="feature__no">02</span>
+            <h4>Using the Cold Air Drying Method</h4>
+            <p>We dry our products at temperatures as low as natural wind — <strong>18–20&nbsp;°C</strong> — to keep flavour and texture intact.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VALUES ============ -->
+  <section class="section values" id="values">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <p class="eyebrow eyebrow--light reveal">Corporate Philosophy</p>
+        <h2 class="section__title reveal">Keeping Nature and Sea</h2>
+        <p class="section__lead reveal">With our philosophy of <em>“Bringing Sea to Customers,”</em> Dongoh Food always does its best
+          to make fishery products from the clean sea of Korea.</p>
+      </div>
+      <div class="values__grid">
+        <article class="value reveal">
+          <span class="value__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M8 34 L20 20 L28 28 L40 14" /><path d="M32 14 H40 V22" /></svg>
+          </span>
+          <h3>Challenge</h3>
+          <p>Accelerating the development of new technologies and products for advanced business.</p>
+        </article>
+        <article class="value reveal" style="--d:.1s">
+          <span class="value__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M24 6 L38 12 V24 C38 33 31 39 24 42 C17 39 10 33 10 24 V12 Z" /><path d="M18 24 L22 28 L30 20" /></svg>
+          </span>
+          <h3>Honesty</h3>
+          <p>Righteous management focusing on internal stability, based on experience and wisdom.</p>
+        </article>
+        <article class="value reveal" style="--d:.2s">
+          <span class="value__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M24 40 C24 40 8 30 8 18 C8 12 12 8 17 8 C20 8 22.5 9.6 24 12 C25.5 9.6 28 8 31 8 C36 8 40 12 40 18 C40 30 24 40 24 40 Z" /></svg>
+          </span>
+          <h3>Trust</h3>
+          <p>Producing reliable food based on a wealth of experience and deep knowledge — improving the quality of our customers’ dietary life.</p>
+        </article>
+      </div>
+    </div>
+    <figure class="values__photo reveal">
+      <img src="images/photo-factory-aerial.jpg" alt="Aerial view of the Dongoh Food factory" loading="lazy">
+      <figcaption>Dongoh Food production facility, Korea</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ HISTORY + CEO ============ -->
+  <section class="section history" id="history">
+    <div class="container history__grid">
+      <div>
+        <p class="eyebrow reveal">History</p>
+        <h2 class="section__title reveal">Five decades of steady growth.</h2>
+        <ol class="timeline">
+          <li class="reveal is-key"><time>1973</time><p>Dongoh Food Company founded</p></li>
+          <li class="reveal"><time>1989</time><p>Expansion of the Gangjin plant in Jeollanam-do</p></li>
+          <li class="reveal"><time>1997</time><p>Selected as a promising small and medium-sized enterprise</p></li>
+          <li class="reveal is-key"><time>2001</time><p>Million-Dollar Export Tower</p></li>
+          <li class="reveal"><time>2002</time><p>US FDA · ISO 9001 · ISO 14001 · HACCP (Europe) certification</p></li>
+          <li class="reveal"><time>2004</time><p>Busan plant expansion and transfer</p></li>
+          <li class="reveal is-key"><time>2012</time><p>Five Million-Dollar Export Tower</p></li>
+          <li class="reveal"><time>2015</time><p>Completion of seasoning processing facilities at the Busan plant</p></li>
+          <li class="reveal"><time>2019</time><p>Global food safety standard BRCGS certification</p></li>
+          <li class="reveal is-key"><time>2020</time><p>Food Safety Management Certification (HACCP)</p></li>
+          <li class="reveal"><time>2022</time><p>ISO 22000 Food Safety Management System certification</p></li>
+        </ol>
+      </div>
+
+      <aside class="ceo reveal" aria-label="CEO message">
+        <div class="ceo__photo"><img src="images/photo-ceo.jpg" alt="CEO of Dongoh Food" loading="lazy"></div>
+        <p class="eyebrow">CEO Message</p>
+        <h3 class="ceo__title">Welcome to Dongoh Food.</h3>
+        <blockquote>
+          <p>Dear valued customers,</p>
+          <p>Since its founding in 1973, Dongoh Food Co., Ltd. has grown steadily for over five decades, guided by integrity
+            and sound management based on the practical values, experience and wisdom accumulated over the years.</p>
+          <p>Under the slogan <em>“As Natural as the Sea Itself,”</em> we strive to embody the spirit of being
+            <em>“a company that captures the essence of the sea.”</em> We are building upon our achievements to realize
+            greater future growth.</p>
+          <p>Thank you for your continued trust and support.</p>
+        </blockquote>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ QUALITY ============ -->
+  <section class="section quality" id="quality">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow reveal">Technical Status</p>
+        <h2 class="section__title reveal">Built for safe, consistent quality.</h2>
+      </div>
+
+      <div class="tech">
+        <div class="tech__text reveal">
+          <p>Our facilities are equipped with the machinery needed to clean, dry, inspect and pack seaweed with care:</p>
+          <ul class="chips">
+            <li>Cold air dryer</li><li>Dehydrator</li><li>Refrigerator</li><li>Cutting machine</li>
+            <li>Hot air dryer</li><li>Separator</li><li>Metal detector</li>
+          </ul>
+        </div>
+        <div class="tech__imgs">
+          <img class="reveal" src="images/photo-machine-1.jpg" alt="Seaweed processing line" loading="lazy">
+          <img class="reveal" style="--d:.1s" src="images/photo-machine-2.jpg" alt="Packing and inspection equipment" loading="lazy">
+        </div>
+      </div>
+
+      <h3 class="quality__sub reveal">Production Process</h3>
+      <ol class="process" id="process">
+        <li class="reveal"><span class="process__icon"><svg viewBox="0 0 48 48"><path d="M6 32 H42 L37 39 H11 Z"/><path d="M16 32 V18 H28 L33 32"/><path d="M4 43 C9 40 13 46 18 43 C23 40 27 46 32 43 C37 40 41 46 44 43"/></svg></span><span class="process__step">01</span><p>Collect sea mustard</p></li>
+        <li class="reveal" style="--d:.05s"><span class="process__icon"><svg viewBox="0 0 48 48"><path d="M24 6 V14"/><path d="M14 14 H34 L30 22 H18 Z"/><path d="M18 28 V32 M24 28 V36 M30 28 V32 M21 38 V42 M27 38 V42"/></svg></span><span class="process__step">02</span><p>Clean</p></li>
+        <li class="reveal" style="--d:.1s"><span class="process__icon"><svg viewBox="0 0 48 48"><path d="M24 6 C24 6 12 20 12 28 C12 35 17.5 40 24 40 C30.5 40 36 35 36 28 C36 20 24 6 24 6 Z"/><path d="M30 26 C34 22 40 24 42 20"/></svg></span><span class="process__step">03</span><p>Dehydrate</p></li>
+        <li class="reveal" style="--d:.15s"><span class="process__icon"><svg viewBox="0 0 48 48"><circle cx="21" cy="21" r="12"/><path d="M30 30 L42 42"/></svg></span><span class="process__step">04</span><p>Inspect foreign objects</p></li>
+        <li class="reveal" style="--d:.2s"><span class="process__icon"><svg viewBox="0 0 48 48"><path d="M6 18 H30 C34 18 36 15 36 12 C36 9 33 7 30 8"/><path d="M6 26 H38 C42 26 44 29 44 32 C44 35 41 37 38 36"/><path d="M6 34 H24"/></svg></span><span class="process__step">05</span><p>Dry</p></li>
+        <li class="reveal" style="--d:.25s"><span class="process__icon"><svg viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="3"/><path d="M14 22 C18 18 30 18 34 22"/><path d="M18 27 C21 25 27 25 30 27"/><circle cx="24" cy="32" r="1.5"/></svg></span><span class="process__step">06</span><p>Detect metals</p></li>
+        <li class="reveal" style="--d:.3s"><span class="process__icon"><svg viewBox="0 0 48 48"><path d="M8 16 L24 8 L40 16 V34 L24 42 L8 34 Z"/><path d="M8 16 L24 24 L40 16 M24 24 V42"/></svg></span><span class="process__step">07</span><p>Packing</p></li>
+        <li class="reveal" style="--d:.35s"><span class="process__icon"><svg viewBox="0 0 48 48"><path d="M4 12 H30 V34 H4 Z"/><path d="M30 20 H38 L44 27 V34 H30"/><circle cx="12" cy="36" r="4"/><circle cx="36" cy="36" r="4"/></svg></span><span class="process__step">08</span><p>Release</p></li>
+      </ol>
+
+      <div class="cert" id="certificates">
+        <div class="cert__text">
+          <p class="eyebrow reveal">Certificates &amp; Awards</p>
+          <h3 class="cert__title reveal">Recognized for safety at home and abroad.</h3>
+          <p class="reveal">Dongoh Food has acquired diverse Korean and global certifications to provide safe products, and will
+            continue to do its best to enhance the quality of our customers’ dietary lives.</p>
+          <ul class="cert__list">
+            <li class="reveal"><strong>ISO 9001</strong><span>Quality management</span></li>
+            <li class="reveal"><strong>HACCP UK</strong><span>Food hazard control</span></li>
+            <li class="reveal"><strong>BRCGS</strong><span>Global food safety standard</span></li>
+            <li class="reveal"><strong>HACCP Korea</strong><span>Food Safety Management Certification</span></li>
+            <li class="reveal"><strong>ISO 22000</strong><span>Food safety management system</span></li>
+            <li class="reveal"><strong>US FDA</strong><span>Certified since 2002</span></li>
+          </ul>
+        </div>
+        <figure class="cert__img reveal"><img src="images/photo-certificates.jpg" alt="Dongoh Food certificates" loading="lazy"></figure>
+      </div>
+
+      <div class="award reveal">
+        <div class="award__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M16 6 H32 V18 C32 23 28 27 24 27 C20 27 16 23 16 18 Z"/><path d="M16 10 H9 C9 16 12 19 16 19 M32 10 H39 C39 16 36 19 32 19"/><path d="M24 27 V35 M16 42 H32 L30 35 H18 Z"/></svg>
+        </div>
+        <div>
+          <p class="award__kicker">Award</p>
+          <p class="award__title">Won the “7 Million Dollar Export Tower Award”</p>
+          <p class="award__by">Organized by the Korea International Trade Association · also awarded by Gyeongsangnam-do</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section class="section products" id="products">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <p class="eyebrow reveal">Product Introduction</p>
+        <h2 class="section__title reveal">From the sea, to every table.</h2>
+        <p class="section__lead reveal">Six product lines, from ready-to-eat seaweed salads to traditional dried and salted seaweed.</p>
+      </div>
+      <div class="tabs reveal" role="tablist" aria-label="Product categories" id="productTabs"></div>
+      <div class="category" id="productPanel" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="container contact__grid">
+      <div class="contact__intro">
+        <p class="eyebrow eyebrow--light reveal">Contact</p>
+        <h2 class="section__title reveal">Let’s bring the sea to your customers.</h2>
+        <p class="reveal">For export inquiries, product samples or partnership, please get in touch with our team.</p>
+        <a class="btn btn--light reveal" href="mailto:dongoh2k@dongoh2k.co.kr">Email us</a>
+      </div>
+      <div class="contact__cards">
+        <div class="contact__card reveal">
+          <h3>Head Office</h3>
+          <p>60, Gaju-ro, Jinhae-gu, Changwon-si,<br>Gyeongsangnam-do, Republic of Korea</p>
+        </div>
+        <div class="contact__card reveal" style="--d:.1s">
+          <h3>Factory 2</h3>
+          <p>13, Yeongpung-gil, Chilyang-myeon, Gangjin-gun,<br>Jeollanam-do, Republic of Korea</p>
+        </div>
+        <div class="contact__card contact__card--list reveal" style="--d:.2s">
+          <dl>
+            <div><dt>Tel</dt><dd><a href="tel:+82555433531">+82 (0)55-543-3531</a></dd></div>
+            <div><dt>Fax</dt><dd>+82 (0)55-552-0794</dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:dongoh2k@dongoh2k.co.kr">dongoh2k@dongoh2k.co.kr</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <img src="images/logo-dfc.png" alt="DFC Dongoh Food Co., Ltd." class="footer__logo">
+    <p>© Dongoh Food Co., Ltd. All rights reserved.</p>
+    <a href="#top" class="footer__top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

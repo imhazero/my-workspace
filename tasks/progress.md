@@ -41,3 +41,10 @@
   - `.claude/hooks/auto-push.sh` 작성: 변경 없으면 종료 / 위험 파일 이름(.env, 키, .bak, id_rsa, credential, secret) 또는 키 형태 문자열(sk-, ghp_, AKIA, PRIVATE KEY, api_key= 등) 발견 시 업로드 중단 + 경고
   - `.claude/settings.json`에 Stop 훅 등록 (timeout 90초)
   - 임시 연습 저장소에서 시험 6건 통과: 변경 없음 / 정상 업로드(.env 제외) / id_rsa 파일 차단 / api_key 차단 / sk- 키 차단 / 마스킹 예시(sk-or-v1-***)는 통과
+- 동오식품 마이크로사이트 제작 (`dongoh-microsite/`, 영문, 반응형) — 기준: `TEST/동오식품 회사 브로슈어_영문.pdf`
+  - PDF 글자가 외곽선 처리돼 텍스트 추출 불가 → 지면 이미지(10장)를 직접 풀어서 내용 확인 후 정리
+  - 브로슈어 지면에서 사진 14장 + 제품 이미지 43개 잘라 웹용 JPEG로 변환 (총 약 3MB)
+  - 구성: 대문(바다 빛줄기·흔들리는 해조류·기포 애니메이션) → 핵심 수치 → 회사 소개 → 핵심가치 → 연혁·CEO 인사말 → 기술·생산공정·인증·수상 → 제품 6개 카테고리 탭 → 연락처
+  - 검증: Chrome으로 PC(1440px)·휴대폰(390px) 전체 화면 촬영, JS 오류 0 / 깨진 이미지 0 / 가로 넘침 없음, 제품 탭 6개 개수 일치(8·8·6·4·9·8), 휴대폰 메뉴 열림 확인
+  - 브로슈어 오탈자 정리: "Wellcome"→"Welcome", "Dongo"→"Dongoh"
+  - `.gitignore`에 `TEST/` 추가 (원본 87MB PDF는 GitHub 제외, 백업: `.gitignore.bak`) — 사이트만 업로드 (사용자 선택)

@@ -26,3 +26,6 @@ id_ed25519.*
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# 고객사 원본 자료 (용량 큼 · GitHub 업로드 제외)
+TEST/
