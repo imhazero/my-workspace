@@ -43,3 +43,11 @@
 - [x] 3. `.env`·`.bak` 미포함 재확인 후 force push
 - [x] 4. GitHub에서 커밋 1개·메시지·파일 목록 확인
 - [x] 5. progress.md에 기록
+
+## GitHub 자동 업로드 설정 (사용자 선택: Claude 답변이 끝날 때)
+- 방식: Claude Code Stop 훅 → `.claude/hooks/auto-push.sh` 실행
+- 안전장치: 바뀐 파일 없으면 아무것도 안 함 / .env·키·.bak·credential·secret 파일 또는 키처럼 보이는 문자열이 있으면 **올리지 않고 경고**
+- [x] 1. 자동 업로드 스크립트 `.claude/hooks/auto-push.sh` 만들기
+- [x] 2. 스크립트 단독 시험 (변경 없음 / 위험 파일 차단 / 정상 업로드)
+- [x] 3. `.claude/settings.json`에 Stop 훅 등록 + 문법 검사
+- [x] 4. progress.md 기록

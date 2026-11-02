@@ -37,3 +37,7 @@
   - 문제: push 중 Git Credential Manager 로그인 창이 떠서 멈춤 → 원인: git과 gh 로그인이 따로 관리됨
   - 해결: 멈춘 push 중단 → `gh auth setup-git` (전역 ~/.gitconfig에 gh 로그인 사용 설정) → push 성공
   - 검증: GitHub 커밋 1개 "Initial setup", PRIVATE, 파일 7개, .env/.bak 없음
+- GitHub 자동 업로드 설정 (사용자 선택: Claude 답변이 끝날 때마다)
+  - `.claude/hooks/auto-push.sh` 작성: 변경 없으면 종료 / 위험 파일 이름(.env, 키, .bak, id_rsa, credential, secret) 또는 키 형태 문자열(sk-, ghp_, AKIA, PRIVATE KEY, api_key= 등) 발견 시 업로드 중단 + 경고
+  - `.claude/settings.json`에 Stop 훅 등록 (timeout 90초)
+  - 임시 연습 저장소에서 시험 6건 통과: 변경 없음 / 정상 업로드(.env 제외) / id_rsa 파일 차단 / api_key 차단 / sk- 키 차단 / 마스킹 예시(sk-or-v1-***)는 통과
