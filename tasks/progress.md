@@ -66,3 +66,8 @@
   - 백업: `index.html.before-logo.bak`, `style.css.before-logo.bak`
   - 검증: 로컬 서버로 로고 2개 200, Chrome으로 PC 첫 화면/스크롤+푸터, 휴대폰 스크롤/푸터/메뉴 열림 확인
   - 촬영 중 문제: 사이트의 부드러운 스크롤·전환 효과 때문에 중간 상태가 찍힘 → 촬영 시에만 효과 끄고 재촬영 (사이트 문제 아님)
+- 동오식품 사이트 로고 깨짐 수정 (사용자 캡처: `TEST/문제점 캡처.JPG` — 상단 흰색·컬러 로고가 둘 다 크게 나란히 표시)
+  - 근본 원인: 배포 준비 때 `vercel.json`에서 CSS/JS를 브라우저에 1시간 저장하도록 설정 → 이전에 방문한 브라우저가 새 HTML + 예전 style.css 조합으로 표시 (서버의 CSS는 최신이었음). 새 브라우저로만 검증해서 놓친 것
+  - 수정: ① `index.html`의 `style.css`, `script.js` 주소에 `?v=20261103` 버전 표시 → 기존 방문자도 즉시 새 파일 받음 ② `vercel.json` CSS/JS 캐시 `max-age=0, must-revalidate`, 이미지 7일 → 1일 ③ `DEPLOY.md`에 "CSS/JS 수정 시 버전 번호 올리기" 안내 추가
+  - 백업: `index.html.before-cache.bak`, `vercel.json.before-cache.bak`
+  - 검증: 로컬 서버 헤더 확인, JS 오류 0 / 깨진 이미지 0
