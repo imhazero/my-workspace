@@ -38,8 +38,8 @@
 
 ## GitHub 업로드 조건 맞추기 (승인 완료 — force push 포함)
 - 조건: private ✅ / .gitignore로 민감 파일 제외 ✅ / README 정리 / 첫 커밋 메시지 "Initial setup"
-- [ ] 1. README.md 백업(`README.md.bak`) 후 정리 — csv 추가, ☁️/💻 표시, 저장소 주소
-- [ ] 2. 변경 파일 모두 첫 커밋에 합치고 메시지를 "Initial setup"으로 변경 (amend)
-- [ ] 3. `.env`·`.bak` 미포함 재확인 후 force push
-- [ ] 4. GitHub에서 커밋 1개·메시지·파일 목록 확인
-- [ ] 5. progress.md에 기록
+- [x] 1. README.md 백업(`README.md.bak`) 후 정리 — csv 추가, ☁️/💻 표시, 저장소 주소
+- [x] 2. 변경 파일 모두 첫 커밋에 합치고 메시지를 "Initial setup"으로 변경 (amend)
+- [x] 3. `.env`·`.bak` 미포함 재확인 후 force push
+- [x] 4. GitHub에서 커밋 1개·메시지·파일 목록 확인
+- [x] 5. progress.md에 기록

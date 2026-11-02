@@ -31,3 +31,9 @@
   - `git init -b main`, 작성자: imhazero / GitHub noreply 메일 (이 폴더에만 설정)
   - 올린 파일 7개: .gitignore, CLAUDE.md, README.md, SECURITY.md, tasks/(todo, progress, downloads_move_log.csv — 사용자 선택으로 포함)
   - `.env`, `CLAUDE.md.md.bak`는 .gitignore로 제외 → 업로드 전후 모두 확인
+- GitHub 업로드 조건 맞추기 (사용자 조건: private / .gitignore / README 정리 / 첫 커밋 "Initial setup")
+  - README.md 정리 (원본 백업: `README.md.bak`): 저장소 주소, ☁️GitHub/💻로컬 표시, csv 항목, 공개 전 주의 문구 추가
+  - 첫 커밋을 amend로 "Initial setup"(1fda6d6)으로 변경 → 사용자 승인 후 force push (기존 80858dc 대체)
+  - 문제: push 중 Git Credential Manager 로그인 창이 떠서 멈춤 → 원인: git과 gh 로그인이 따로 관리됨
+  - 해결: 멈춘 push 중단 → `gh auth setup-git` (전역 ~/.gitconfig에 gh 로그인 사용 설정) → push 성공
+  - 검증: GitHub 커밋 1개 "Initial setup", PRIVATE, 파일 7개, .env/.bak 없음
