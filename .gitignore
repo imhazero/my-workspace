@@ -1,0 +1,28 @@
+# ===========================================
+# .gitignore — git에 절대 올리면 안 되는 파일 목록
+# ===========================================
+
+# 🔒 환경변수 (API 키, 비밀번호)
+.env
+.env.*
+!.env.example
+
+# 🔒 키 / 인증서 파일
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+*credentials*
+*secret*
+
+# 백업 파일
+*.bak
+
+# 운영체제가 만드는 파일
+Thumbs.db
+desktop.ini
+.DS_Store

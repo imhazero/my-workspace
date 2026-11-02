@@ -1,0 +1,33 @@
+# 작업 기록 (progress)
+
+> 한 일을 날짜별로 **아래에 계속 추가**합니다. 기존 내용은 지우거나 고치지 않아요.
+
+---
+
+## 2026-11-02
+
+- CLAUDE.md 규칙 확인 (현재 파일 이름이 `CLAUDE.md.md`라 자동으로 읽히지 않는 점 발견)
+- 현재 상태 점검: `.ssh` 폴더·오라클 키·SSH 설정 없음, git 설치됨
+- `tasks/` 폴더 생성, `todo.md`, `progress.md` 작성
+- `SECURITY.md` 비상 매뉴얼 작성 (OpenRouter / Oracle / WordPress)
+- `README.md`로 폴더 구조 정리
+- `CLAUDE.md.md` → `CLAUDE.md` 이름 변경 (원본 백업: `CLAUDE.md.md.bak`, 내용 동일 확인)
+- `.gitignore` 작성 (.env, *.key, *.pem, id_rsa, credentials, *.bak 등 차단 — 임시 폴더에서 git check-ignore 테스트 통과)
+- `.env` 빈 틀 작성 (OpenRouter / Oracle / WordPress 키 이름만, 값은 비움)
+- `CLAUDE.md` 폴더 경로 수정: `~/claude-workspace` → `C:\Users\82103\Desktop\claude - workspace` (5곳, 수정 전 원본은 `CLAUDE.md.md.bak`)
+- [정정] 위 `CLAUDE.md` 폴더 경로 수정은 "5곳"이 아니라 **6곳**(4, 89~92, 102번 줄)임
+- 작업 결과 전체 검증 (파일 8개 존재, .gitignore 테스트 11건 통과, 한글 깨짐 없음) / `todo.md` 완료 항목 정리
+- `README.md` 파일 안내 표에 `.env`, `.gitignore` 설명 추가
+- 다운로드 폴더 정리 (사용자 승인 후 실행): 최상위 파일 2,875개를 확장자 기준으로 이동 → images 953 / docs 1,591 / misc 331
+  - 하위 폴더 51개, desktop.ini, ~WRL0003.tmp, Office 임시파일(`~$`)은 이동 안 함
+  - 덮어쓰기·삭제 0건, 이름 충돌 0건. 이동 기록: `tasks/downloads_move_log.csv` (원위치 복구용)
+  - 중간에 2회 중단: 한글·PowerPoint·Excel에서 열려 있던 파일 잠금 → 사용자가 닫은 뒤 재개. `~$` 임시파일 제외 규칙 추가
+  - 검증: 폴더별 실제 파일 수 = 기록 수, 기록된 2,875건 모두 새 위치에 존재·원위치에 없음 확인
+
+## 2026-11-02
+- GitHub CLI(gh) 2.103.3 설치 (winget, GitHub.cli) — 설치 확인 완료
+- GitHub 로그인: `gh auth login --web` → 계정 imhazero, HTTPS, 토큰은 Windows 자격 증명 관리자(keyring)에 저장
+- workspace 폴더 GitHub 업로드: https://github.com/imhazero/my-workspace (**비공개**)
+  - `git init -b main`, 작성자: imhazero / GitHub noreply 메일 (이 폴더에만 설정)
+  - 올린 파일 7개: .gitignore, CLAUDE.md, README.md, SECURITY.md, tasks/(todo, progress, downloads_move_log.csv — 사용자 선택으로 포함)
+  - `.env`, `CLAUDE.md.md.bak`는 .gitignore로 제외 → 업로드 전후 모두 확인
