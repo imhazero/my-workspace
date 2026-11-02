@@ -77,3 +77,10 @@
 ## 다음에 할 것 (사용자)
 - [ ] 버셀에서 직접 배포 — 순서: `dongoh-microsite/DEPLOY.md` (Root Directory = `dongoh-microsite` 꼭!)
 - [ ] 배포 주소 알려주기 → og:url, og:image를 전체 주소로 교체
+
+## 동오식품 마이크로사이트 — 로고 교체 (완료)
+- [x] 1. 원본 로고(영문 가로형 기본/W) 여백 잘라 웹용 생성: `logo-dongoh-color.png`, `logo-dongoh-white.png` (760×160)
+- [x] 2. 상단 메뉴: 대문 위 흰색 → 스크롤 시 컬러로 전환, 휴대폰 메뉴 열면 흰색 (백업: `*.before-logo.bak`)
+- [x] 3. 푸터: 컬러 로고
+- [x] 4. PC·휴대폰 4가지 상태 스크린샷 확인
+- [x] 5. 커밋 + GitHub 업로드
